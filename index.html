@@ -1,49 +1,119 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مدرسه انرژی اتمی | آموزش و ارسال تکلیف</title>
-<link rel="stylesheet" href="./asesst/styles/reset.css">
-<link rel="stylesheet" href="./home.css">
-</head>
-<body>
-<aside class="sidebar">
-  <a class="brand" href="./index.html"><span class="brand-mark">⚛</span><span>مدرسه انرژی اتمی<small>فضای آموزش برنامه‌نویسی</small></span></a>
-  <div class="menu-label">منوی اصلی</div>
-  <a class="menu-item active" href="#lessons"><span>⌘</span> کدهای تدریس‌شده</a>
-  <a class="menu-item" href="#submit"><span>↥</span> ارسال تکلیف</a>
-  <a class="menu-item" href="./asesst/html-files/HtmlCssProjects.html"><span>◈</span> پروژه‌های HTML و CSS</a>
-  <div class="sidebar-bottom"><div class="status-dot"></div><span>محیط آموزشی</span><small>نسخه نمایشی</small></div>
-</aside>
-<main class="main">
-  <header class="topbar"><div><span class="crumb">خانه /</span> <strong>داشبورد آموزشی</strong></div><a class="teacher-link" href="./teacher.html">ورود استاد <span>↗</span></a></header>
-  <section class="hero">
-    <div class="hero-copy"><span class="eyebrow">LEARN • BUILD • SHARE</span><h1>یاد بگیر، کدنویسی کن،<br><em>پیشرفت کن.</em></h1><p>کدهای تدریس‌شده را ببین و تکلیفت را به‌سادگی برای استاد ارسال کن.</p><a class="hero-btn" href="#lessons">مشاهده آموزش‌ها <span>←</span></a></div>
-    <div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="code-window"><div class="window-head"><i></i><i></i><i></i><span>python.py</span></div><pre><b>def</b> <strong>learn</strong>():
-    skills = <em>["Python", "Web"]</em>
-    <b>for</b> skill <b>in</b> skills:
-        print(<em>"Hello " + skill</em>)
-    <b>return</b> <strong>success</strong> <span># keep going</span></pre></div><div class="floating-chip">⌘ &nbsp; Python</div></div>
-  </section>
-  <section id="lessons" class="content-section">
-    <div class="section-head"><div><span class="eyebrow">LEARNING LIBRARY</span><h2>کدهای تدریس‌شده</h2><p>برای ورود به جزئیات هر پروژه، کارت موردنظر را انتخاب کن.</p></div><span class="count-pill">۲ آموزش</span></div>
-    <div class="lesson-grid">
-      <article class="lesson-card"><div class="lesson-visual ai-visual"><img src="./asesst/imges/AI.png" alt="تصویر پروژه چت‌بات"><span class="visual-tag">PYTHON / AI</span></div><div class="lesson-body"><div class="card-meta"><span>● مبتدی</span><span>پایتون</span></div><h3>برنامه چت‌بات</h3><p>ساخت برنامه چت‌بات با استفاده از سرویس OpenRouter.</p><a class="card-link" href="./asesst/html-files/Ai.html">مشاهده جزئیات <b>←</b></a></div></article>
-      <article class="lesson-card"><div class="lesson-visual weather-visual"><img src="./asesst/imges/wheater.png" alt="تصویر پروژه آب‌وهوا"><span class="visual-tag">PYTHON / API</span></div><div class="lesson-body"><div class="card-meta"><span>● مبتدی</span><span>پایتون</span></div><h3>برنامه آب‌وهوا</h3><p>ساخت برنامه آب‌وهوا بدون نیاز به API Key.</p><a class="card-link" href="./asesst/html-files/weather.html">مشاهده جزئیات <b>←</b></a></div></article>
-    </div>
-  </section>
-  <section id="submit" class="content-section submit-section">
-    <div class="section-head"><div><span class="eyebrow">HOMEWORK SUBMISSION</span><h2>ارسال تکلیف دانش‌آموز</h2><p>نام، توضیحات و لینک ویدیوی آپاراتت را وارد کن.</p></div><span class="submit-icon">↥</span></div>
-    <form id="homeworkForm" class="submit-form">
-      <div class="field"><label for="studentName">نام دانش‌آموز</label><input id="studentName" name="studentName" required maxlength="80" placeholder="نام و نام خانوادگی"></div>
-      <div class="field"><label for="homeworkDescription">توضیحات تکلیف</label><textarea id="homeworkDescription" name="description" required rows="4" maxlength="1200" placeholder="توضیح بده چه چیزی آماده کرده‌ای..."></textarea></div>
-      <div class="field"><label for="aparatLink">لینک ویدیوی آپارات</label><input id="aparatLink" name="aparatLink" type="url" required placeholder="https://www.aparat.com/v/..."><small>لینک ویدیوی آپارات را به‌صورت کامل وارد کن.</small></div>
-      <button class="submit-btn" type="submit">ثبت ارسال تکلیف <span>↗</span></button>
-      <p id="formMessage" class="form-message" role="status" hidden></p>
-    </form>
-    <div id="recentSubmissions" class="recent-submissions" hidden><h3>ارسال‌های ثبت‌شده در این مرورگر</h3><div id="submissionItems"></div></div>
-  </section>
-  <footer>مدرسه انرژی اتمی <span>طراحی‌شده برای یادگیری و تمرین</span></footer>
-</main>
-<script src="./home.js"></script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atomic-school</title>
+    <link rel="stylesheet" href="./asesst/styles/reset.css" />
+    <link rel="stylesheet" href="./asesst/styles/styles.css" />
+  </head>
+  <body>
+    <!------------------  Header  ------------------>
+    <header class="Header">
+      <!-- navbar -->
+      <h2 class="navbar-title">مدرسه انرژی اتمی ⚛️</h2>
+      <nav class="navbar">
+        <a
+          href="./index.html"
+          class="header-active-img navbar-item"
+          data-title="کد ها"
+          ><img
+            src="./asesst/imges/code-solid-full.svg"
+            alt="code"
+            class="header-img"
+          />
+        </a>
+        <a
+          href="./asesst/html-files/AbouteWe.html"
+          data-title="درباره ما"
+          class="navbar-item"
+          ><img
+            src="./asesst/imges/user-solid-full.svg"
+            alt="code"
+            class="header-img"
+        /></a>
+        <a
+          href="./asesst/html-files/call.html"
+          data-title="ارتباط با ما"
+          class="navbar-item"
+          ><img
+            src="./asesst/imges/phone-solid-full.svg"
+            alt="code"
+            class="header-img"
+        /></a>
+      </nav>
+    </header>
+
+    <!------------------  Project  ------------------>
+    <main>
+      <h1 class="main-title">پروژه ها پایتون و طراحی سایت</h1>
+      <p class="main-up-text">
+        ! برای هر پروژه، سورس کد آن به صورت کاملا رایگان موجود است
+      </p>
+
+      <!-- main navbar -->
+      <div class="main-navbar">
+        <a href="./asesst/html-files/HtmlCssProjects.html">
+          <p class="main-navbar-text main-navbar-hover">HTML & CSS</p></a
+        >
+        <a href="#">
+          <p class="main-navbar-text main-navbar-active">python</p></a
+        >
+      </div>
+
+      <section class="portal-shortcuts" aria-label="بخش‌های سایت">
+        <a href="./student.html">🎓 ورود دانش‌آموز</a>
+        <a href="./teacher.html">🔐 پنل استاد</a>
+      </section>
+
+      <!--------------- project items -------------->
+      <div class="project-container">
+        <!------ AI ------>
+        <section class="ai-project">
+          <img src="./asesst/imges/AI.png" alt="" class="ai-img" />
+          <!-- down -->
+          <div class="ai-down">
+            <h2 class="ai-title">برنامه چت بات</h2>
+            <p class="ai-text">
+              ساختن برنامه چت بات با استفاده از سایت OpenRouter
+            </p>
+            <!-- info -->
+            <div class="ai-info">
+              <p class="ai-Surface">🟢 مبتدی</p>
+              <div style="display: flex; gap: 10px">
+                <p class="ai-lang">python</p>
+                <p class="ai-lang">api key</p>
+              </div>
+            </div>
+            <!-- btn -->
+            <a href="./asesst/html-files/Ai.html" class="ai-btn"
+              >مشاهده جزئیات</a
+            >
+          </div>
+        </section>
+        <!------ wheader ------>
+        <section class="wheater-project">
+          <img src="./asesst/imges/wheater.png" alt="" class="wheater-img" />
+          <!-- down -->
+          <div class="wheater-down">
+            <h2 class="wheater-title">برنامه آب و هوا</h2>
+            <p class="wheater-text">
+              ساخت برنامه آب و هوا بدون نیاز به api key
+            </p>
+            <!-- info -->
+            <div class="wheater-info">
+              <p class="wheater-Surface">🟢 مبتدی</p>
+              <p class="wheater-lang">python</p>
+            </div>
+            <!-- btn -->
+            <a href="./asesst/html-files/weather.html" class="wheater-btn"
+              >مشاهده جزئیات</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
